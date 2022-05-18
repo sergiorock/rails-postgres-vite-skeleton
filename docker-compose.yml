@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 5100:5100
+      - 3036:3036
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+  db:
+    image: postgres:14.1-alpine
+    volumes:
+      - /usr/local/var/postgres:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
