@@ -36,4 +36,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./node_modules
+      device: ${PWD}/node_modules
