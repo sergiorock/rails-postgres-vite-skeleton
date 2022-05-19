@@ -1,6 +1,6 @@
 # README
 
-* Crear en el root una carpeta .node_modules
+* Crear en el root una carpeta node_modules
 * Crear en el root un archivo .env con las siguientes variables, reemplazando su valor en caso de ser necesario:
 
 
