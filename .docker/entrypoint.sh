@@ -19,6 +19,10 @@ rails db:create
 echo -e "${turquoise}Applying database migrations...${reset}"
 rails db:migrate
 
+# Apply database migrations
+echo -e "${turquoise}Creating seeds...${reset}"
+rails db:seed
+
 # Start server
 echo -e "${turquoise}Starting server...${reset}"
 
